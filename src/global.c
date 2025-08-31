@@ -12,7 +12,7 @@ Global global;
 
 int is_option(const char *name){
 
-  if(strcmp(name, "--help")) return 1;
+  if(!strcmp(name, "--help")) return 1;
   else if(!strcmp(name, "--version"))return 1;
   else if(!strcmp(name, "install"))return 1;
   else if(!strcmp(name, "remove"))return 1;
