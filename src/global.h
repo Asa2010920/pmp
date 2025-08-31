@@ -5,7 +5,8 @@ typedef enum {
   VERSION,
   INSTALL,
   REMOVE,
-  LIST
+  LIST,
+  PUSH
 } Option;
 
 typedef struct global {
@@ -16,3 +17,4 @@ extern const char *options[];
 extern Global global;
 
 int is_option(const char *name);
+void set_option(const char *option);

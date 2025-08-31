@@ -11,12 +11,28 @@ const char *options[] = {
 Global global;
 
 int is_option(const char *name){
-  size_t n = sizeof(options) / sizeof(options[0]);
-  
-  for(size_t i = 0; i < n; i++){
-    if(!strcmp(name, options[n])){
-      return 0;
-    }
-  }
-  return 1;
+
+  if(strcmp(name, "--help")) return 1;
+  else if(!strcmp(name, "--version"))return 1;
+  else if(!strcmp(name, "install"))return 1;
+  else if(!strcmp(name, "remove"))return 1;
+  else if(!strcmp(name, "list"))return 1;
+  else if(!strcmp(name, "push"))return 1;
+
+  return 0;
+}
+
+void set_option(const char *option){
+  if(!strcmp(option, "--help"))
+    global.option = HELP;
+  else if(!strcmp(option, "--version"))
+    global.option = VERSION;
+  else if(!strcmp(option, "install"))
+    global.option = INSTALL;
+  else if(!strcmp(option, "remove"))
+    global.option = REMOVE;
+  else if(!strcmp(option, "list"))
+    global.option = LIST;
+  else if(!strcmp(option, "push"))
+    global.option = PUSH;
 }
