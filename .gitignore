@@ -1,0 +1,10 @@
+
+
+
+#Dir
+dep/
+build/
+obj/
+
+#Exe
+pmp
