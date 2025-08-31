@@ -6,4 +6,6 @@ enum {
   ERR_NO_ARGS
 };
 
+#define CHECK if(errcode != SUCCESS) return errcode
+
 static int errcode = SUCCESS;

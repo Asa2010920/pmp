@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "error.h"
 
 int main(int argc, char **argv){
   (void) argc;
@@ -6,5 +7,5 @@ int main(int argc, char **argv){
 
   printf("Hello, World!\n");
 
-  return 0;
+  return errcode;
 }
