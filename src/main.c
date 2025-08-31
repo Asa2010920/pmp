@@ -1,5 +1,6 @@
 #include "error.h"
 #include "global.h"
+#include "func.h" 
 
 int handle_args(int argc, char **argv){
   if(argc == 1){
@@ -25,6 +26,8 @@ int main(int argc, char **argv){
   errcode = handle_args(argc, argv);
   CHECK;
 
+  errcode = handle_mode(argc, argv); 
+  CHECK;
 
   return errcode;
 }
